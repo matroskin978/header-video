@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .header {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .header-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header-text h1 {
+            letter-spacing: 10px;
+            font-size: 7rem;
+            line-height: 7rem;
+            cursor: pointer;
+            /* filter: blur(5px);
+            transition: all 1s; */
+        }
+
+        .header-text h1 span {
+            filter: blur(5px);
+            transition: all .5s;
+        }
+
+        .header-text h1 span:hover {
+            filter: blur(1px);
+        }
+
+        .content {
+            max-width: 1170px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-video">
+            <video src="video/space.mp4" autoplay muted loop poster="video/space.jpg"></video>
+        </div>
+        <div class="header-text">
+            <h1>Greate Space</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolore unde ex accusantium, autem
+            repudiandae, fuga labore veritatis sunt blanditiis, laudantium nihil. Asperiores laboriosam at doloremque
+            repudiandae rerum tempora veniam.</p>
+        <p>Sit aliquam aperiam voluptas facere reprehenderit molestiae nesciunt aliquid unde, iusto ducimus! Debitis
+            sequi ex voluptatibus culpa delectus aliquid neque dicta, magnam deserunt quae quibusdam mollitia est
+            aliquam labore ratione.</p>
+        <p>Accusamus voluptatum aut sint soluta non, ipsa accusantium magni? Molestias magni quos eius. Exercitationem,
+            cupiditate. Suscipit, quaerat est fugit asperiores qui ab necessitatibus iure illum in accusantium, fugiat
+            reprehenderit dolorum.</p>
+        <p>Cumque obcaecati earum ea maiores ab accusantium autem qui! Repellat corrupti modi provident ratione itaque
+            repellendus debitis at earum doloribus, dolores quo voluptatem quas illum dignissimos ullam voluptatum
+            impedit aliquam.</p>
+        <p>Inventore consequuntur, reprehenderit, nesciunt in excepturi quae molestias dolores asperiores minima sequi
+            illum doloremque aliquid, non placeat nostrum aut. Accusamus libero enim a possimus ipsum excepturi optio
+            corporis molestias ipsam!</p>
+        <p>Eius rem laudantium quibusdam vel voluptatum voluptatem accusantium neque reprehenderit dolor, earum eligendi
+            eum sint. Asperiores a sit laborum? Qui, delectus ipsum velit commodi rerum temporibus voluptates dolores
+            pariatur nisi?</p>
+        <p>Nesciunt ullam sequi aut alias ex, magnam dicta veritatis eos, enim repudiandae dolor, mollitia ea rerum
+            dolorum aliquam cum minus? Laborum molestias corporis nemo, velit commodi ab quidem numquam vitae.</p>
+        <p>Quibusdam ut, earum quos at eaque eius ex placeat illo minus provident consectetur esse laudantium id nostrum
+            quasi quaerat ad. Accusantium, obcaecati aliquid! Ad sunt eius dignissimos incidunt consequatur voluptas.
+        </p>
+        <p>Illo doloremque quasi nobis enim expedita laboriosam minima ullam, dolorum aspernatur ad nemo maiores ipsa
+            sequi. Perferendis veniam rem sequi ab fugiat reprehenderit molestiae, vel error dolore accusamus illum
+            magnam?</p>
+        <p>Natus sit optio perferendis, dolores voluptates nobis minus ex, quo eum corporis animi quia ratione pariatur!
+            Autem animi vitae temporibus porro nostrum minima aliquam, doloribus sed suscipit, libero quam atque.</p>
+    </div>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const h1_text = h1.textContent.split("").map(el => `<span>${el}</span>`).join("");
+        h1.innerHTML = h1_text;
+    </script>
+
+</body>
+
+</html>
